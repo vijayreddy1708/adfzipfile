@@ -21,26 +21,6 @@
 					"referenceName": "AzureDatabricks2",
 					"type": "LinkedServiceReference"
 				}
-			},
-			{
-				"name": "Set variable1",
-				"type": "SetVariable",
-				"dependsOn": [
-					{
-						"activity": "Notebook1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"userProperties": [],
-				"typeProperties": {
-					"variableName": "filename",
-					"value": {
-						"value": "@{activity('Notebook1').output.runOutput}",
-						"type": "Expression"
-					}
-				}
 			}
 		],
 		"parameters": {
