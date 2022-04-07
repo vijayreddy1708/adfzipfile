@@ -1,0 +1,153 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adfdemo3456"
+		},
+		"AzureBlobStorage2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
+		},
+		"AzureDatabricks1_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks1'"
+		},
+		"AzureDatabricks2_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks2'"
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
+		},
+		"AzureSqlDatabase2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase2'"
+		},
+		"adblinkedservice_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'adblinkedservice'"
+		},
+		"emailblob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'emailblob'"
+		},
+		"error_SQL_connection_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'error_SQL_connection'"
+		},
+		"error_blob_connection_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'error_blob_connection'"
+		},
+		"scdblob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'scdblob'"
+		},
+		"sqllnk_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'sqllnk'"
+		},
+		"srclink_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'srclink'"
+		},
+		"testsqldatacontent_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'testsqldatacontent'"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adfdemo3456_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage2_connectionString": {
+						"value": "[parameters('AzureBlobStorage2_connectionString')]"
+					},
+					"AzureDatabricks1_accessToken": {
+						"value": "[parameters('AzureDatabricks1_accessToken')]"
+					},
+					"AzureDatabricks2_accessToken": {
+						"value": "[parameters('AzureDatabricks2_accessToken')]"
+					},
+					"AzureSqlDatabase1_connectionString": {
+						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
+					},
+					"AzureSqlDatabase2_connectionString": {
+						"value": "[parameters('AzureSqlDatabase2_connectionString')]"
+					},
+					"adblinkedservice_accessToken": {
+						"value": "[parameters('adblinkedservice_accessToken')]"
+					},
+					"emailblob_connectionString": {
+						"value": "[parameters('emailblob_connectionString')]"
+					},
+					"error_SQL_connection_connectionString": {
+						"value": "[parameters('error_SQL_connection_connectionString')]"
+					},
+					"error_blob_connection_connectionString": {
+						"value": "[parameters('error_blob_connection_connectionString')]"
+					},
+					"scdblob_connectionString": {
+						"value": "[parameters('scdblob_connectionString')]"
+					},
+					"sqllnk_connectionString": {
+						"value": "[parameters('sqllnk_connectionString')]"
+					},
+					"srclink_connectionString": {
+						"value": "[parameters('srclink_connectionString')]"
+					},
+					"testsqldatacontent_connectionString": {
+						"value": "[parameters('testsqldatacontent_connectionString')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "adfdemo3456_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adfdemo3456_ArmTemplate_0')]"
+			]
+		}
+	]
+}

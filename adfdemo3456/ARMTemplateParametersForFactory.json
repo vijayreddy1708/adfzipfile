@@ -1,0 +1,48 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfdemo3456"
+		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureDatabricks1_accessToken": {
+			"value": ""
+		},
+		"AzureDatabricks2_accessToken": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_connectionString": {
+			"value": ""
+		},
+		"adblinkedservice_accessToken": {
+			"value": ""
+		},
+		"emailblob_connectionString": {
+			"value": ""
+		},
+		"error_SQL_connection_connectionString": {
+			"value": ""
+		},
+		"error_blob_connection_connectionString": {
+			"value": ""
+		},
+		"scdblob_connectionString": {
+			"value": ""
+		},
+		"sqllnk_connectionString": {
+			"value": ""
+		},
+		"srclink_connectionString": {
+			"value": ""
+		},
+		"testsqldatacontent_connectionString": {
+			"value": ""
+		}
+	}
+}
