@@ -43,6 +43,12 @@
 		},
 		"testsqldatacontent_connectionString": {
 			"value": ""
+		},
+		"AzureBlobStorage3_connectionString": {
+			"value": ""
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"value": "https://github.com/vijayreddy1708/adfzipfile/blob/main/DATASET.zip"
 		}
 	}
 }
