@@ -1,0 +1,29 @@
+{
+	"name": "emailblobtgt",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "emailblob",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"tgtname": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "processed",
+				"container": "emailinput"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

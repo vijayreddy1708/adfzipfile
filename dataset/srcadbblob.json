@@ -1,0 +1,78 @@
+{
+	"name": "srcadbblob",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "crickettest.csv",
+				"folderPath": "processed",
+				"container": "emailinput"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Player",
+				"type": "String"
+			},
+			{
+				"name": "Date",
+				"type": "String"
+			},
+			{
+				"name": "Span",
+				"type": "String"
+			},
+			{
+				"name": "Mat",
+				"type": "String"
+			},
+			{
+				"name": "Inn",
+				"type": "String"
+			},
+			{
+				"name": "NO",
+				"type": "String"
+			},
+			{
+				"name": "Runs",
+				"type": "String"
+			},
+			{
+				"name": "HS",
+				"type": "String"
+			},
+			{
+				"name": "Avg",
+				"type": "String"
+			},
+			{
+				"name": "100",
+				"type": "String"
+			},
+			{
+				"name": "50",
+				"type": "String"
+			},
+			{
+				"name": "0",
+				"type": "String"
+			},
+			{
+				"name": "Player Profile",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
