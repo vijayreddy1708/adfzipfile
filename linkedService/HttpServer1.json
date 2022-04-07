@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
-			"url": "https://github.com/vijayreddy1708/adfzipfile/blob/main/DATASET.zip",
+			"url": "https://github.com/vijayreddy1708/adfzipfile/raw/923d2d6f45d48b306e7332a0a0e1414bfe57e947/DATASET.zip",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		}
