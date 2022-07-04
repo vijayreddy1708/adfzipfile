@@ -7,17 +7,49 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adfdemo3456"
 		},
+		"error_blob_connection_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'error_blob_connection'"
+		},
+		"error_SQL_connection_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'error_SQL_connection'"
+		},
+		"testsqldatacontent_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'testsqldatacontent'"
+		},
+		"srclink_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'srclink'"
+		},
+		"sqllnk_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'sqllnk'"
+		},
 		"AzureBlobStorage2_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
+		},
+		"emailblob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'emailblob'"
 		},
 		"AzureDatabricks1_accessToken": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks1'"
 		},
+		"adblinkedservice_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'adblinkedservice'"
+		},
 		"AzureDatabricks2_accessToken": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks2'"
+		},
+		"scdblob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'scdblob'"
 		},
 		"AzureSqlDatabase1_connectionString": {
 			"type": "secureString",
@@ -27,41 +59,13 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase2'"
 		},
-		"adblinkedservice_accessToken": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accessToken' of 'adblinkedservice'"
-		},
-		"emailblob_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'emailblob'"
-		},
-		"error_SQL_connection_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'error_SQL_connection'"
-		},
-		"error_blob_connection_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'error_blob_connection'"
-		},
-		"scdblob_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'scdblob'"
-		},
-		"sqllnk_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'sqllnk'"
-		},
-		"srclink_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'srclink'"
-		},
-		"testsqldatacontent_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'testsqldatacontent'"
-		},
 		"AzureBlobStorage3_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage3'"
+		},
+		"AzureBlobStorage4_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage4'"
 		},
 		"HttpServer1_properties_typeProperties_url": {
 			"type": "string",
@@ -94,14 +98,38 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"error_blob_connection_connectionString": {
+						"value": "[parameters('error_blob_connection_connectionString')]"
+					},
+					"error_SQL_connection_connectionString": {
+						"value": "[parameters('error_SQL_connection_connectionString')]"
+					},
+					"testsqldatacontent_connectionString": {
+						"value": "[parameters('testsqldatacontent_connectionString')]"
+					},
+					"srclink_connectionString": {
+						"value": "[parameters('srclink_connectionString')]"
+					},
+					"sqllnk_connectionString": {
+						"value": "[parameters('sqllnk_connectionString')]"
+					},
 					"AzureBlobStorage2_connectionString": {
 						"value": "[parameters('AzureBlobStorage2_connectionString')]"
+					},
+					"emailblob_connectionString": {
+						"value": "[parameters('emailblob_connectionString')]"
 					},
 					"AzureDatabricks1_accessToken": {
 						"value": "[parameters('AzureDatabricks1_accessToken')]"
 					},
+					"adblinkedservice_accessToken": {
+						"value": "[parameters('adblinkedservice_accessToken')]"
+					},
 					"AzureDatabricks2_accessToken": {
 						"value": "[parameters('AzureDatabricks2_accessToken')]"
+					},
+					"scdblob_connectionString": {
+						"value": "[parameters('scdblob_connectionString')]"
 					},
 					"AzureSqlDatabase1_connectionString": {
 						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
@@ -109,32 +137,11 @@
 					"AzureSqlDatabase2_connectionString": {
 						"value": "[parameters('AzureSqlDatabase2_connectionString')]"
 					},
-					"adblinkedservice_accessToken": {
-						"value": "[parameters('adblinkedservice_accessToken')]"
-					},
-					"emailblob_connectionString": {
-						"value": "[parameters('emailblob_connectionString')]"
-					},
-					"error_SQL_connection_connectionString": {
-						"value": "[parameters('error_SQL_connection_connectionString')]"
-					},
-					"error_blob_connection_connectionString": {
-						"value": "[parameters('error_blob_connection_connectionString')]"
-					},
-					"scdblob_connectionString": {
-						"value": "[parameters('scdblob_connectionString')]"
-					},
-					"sqllnk_connectionString": {
-						"value": "[parameters('sqllnk_connectionString')]"
-					},
-					"srclink_connectionString": {
-						"value": "[parameters('srclink_connectionString')]"
-					},
-					"testsqldatacontent_connectionString": {
-						"value": "[parameters('testsqldatacontent_connectionString')]"
-					},
 					"AzureBlobStorage3_connectionString": {
 						"value": "[parameters('AzureBlobStorage3_connectionString')]"
+					},
+					"AzureBlobStorage4_connectionString": {
+						"value": "[parameters('AzureBlobStorage4_connectionString')]"
 					},
 					"HttpServer1_properties_typeProperties_url": {
 						"value": "[parameters('HttpServer1_properties_typeProperties_url')]"
